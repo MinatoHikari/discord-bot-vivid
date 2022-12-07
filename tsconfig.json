@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "esnext",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": []
+  },
+  "exclude": ["dist", "node_modules"]
+}
