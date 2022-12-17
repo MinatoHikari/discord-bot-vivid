@@ -4,12 +4,19 @@ import {
   CommandInteraction,
 } from "discord.js";
 import { EnhanceClient } from "../types";
+import { prisma } from "../prisma";
 
 const userId = {
   data: new SlashCommandBuilder()
     .setName("userid")
     .setDescription("get user Id"),
   async execute(interaction: CommandInteraction) {
+    await prisma.user.create({
+      data: {
+        id: interaction.user.id,
+        username: interaction.user.username,
+      },
+    });
     await interaction.reply(interaction.user.id);
   },
 };
